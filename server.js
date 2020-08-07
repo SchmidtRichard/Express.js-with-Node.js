@@ -6,6 +6,15 @@ const express = require("express");
 //Function that represents the express module
 const app = express();
 
+//Method provided by express that allows to specify what should happen when the browser gets in touch with our server and makes a get request
+//Call back function that tells the server what to do when it receives the request
+app.get("/", function(request, response) {
+  //console.log(request);
+
+  //response object and send method to send a response
+  response.send("<h1>Hello there panda safadao</h1>");
+});
+
 //Method listen to listen to a specific port for a HTTP request that gets sent to the server
 //Call back function to the listen method to see when the port is setup and the server is running
 app.listen(3000, function() {
